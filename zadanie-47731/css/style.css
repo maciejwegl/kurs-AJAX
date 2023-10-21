@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60vw;
+    height: 50vh;
+    border: 1px solid chocolate;
+    padding: 20px;
+    margin:20px
+
+}
+
+#get-btn {
+    font-size: 1.1em;
+    padding: 6px;
+    background-color: goldenrod;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+#dane-programisty span {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}

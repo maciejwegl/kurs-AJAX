@@ -1,19 +1,15 @@
+console.log('Hello Maciek');
+
 $( function() {
-
-    $.ajax({
-        url: 'https://akademia108.pl/kurs-front-end/ajax/1-pobierz-dane-programisty.php',
-        statusCode: {
-            200: function() {
-                console.log('wszystko gra');
-            }
-        },
-        
-    })
-    .done( function(data) {
-        console.log(data);
-        let person = JSON.parse(data);
-        console.log(person.imie);
-
-    })
+    
+    $('#get-btn').click( function() {
+        $.getJSON('https://akademia108.pl/kurs-front-end/ajax/1-pobierz-dane-programisty.php', function(data) {
+            console.log(data);
+            $('#imie').text(`Imię: ${data.imie}`);
+            $('#nazwisko').text(`Nazwisko: ${data.nazwisko}`);
+            $('#zawod').text(`Zawód: ${data.zawod}`);
+            $('#firma').text(`Firma: ${data.firma}`);
+        })
+    });
 
 });
